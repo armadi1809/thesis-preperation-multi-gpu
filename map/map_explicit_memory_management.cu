@@ -117,12 +117,9 @@ int main()
         }
     }
 
-    auto t2 = std::chrono::steady_clock::now();
-
     using ms = std::chrono::duration<double, std::milli>;
     printf("Two-GPU explicit-memory map succeeded!\n");
     printf("  GPU phase:      %.3f ms\n", ms(t1 - t0).count());
-    printf("  CPU validation: %.3f ms\n", ms(t2 - t1).count());
 
     for (int gpu = 0; gpu < NUM_GPUS; gpu++)
     {
