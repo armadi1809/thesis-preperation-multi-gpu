@@ -51,6 +51,7 @@ int main()
 
     int count;
     CHECK(cudaGetDeviceCount(&count));
+    printf("Found %d GPU(s)\n", count);
 
     if (count < NUM_GPUS)
     {
